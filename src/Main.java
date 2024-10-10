@@ -1,28 +1,23 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Libro libro1 = new Libro();
-        libro1.titulo = "Huasipungo";
-        libro1.autor = "Jorge Icaza";
-        libro1.paginaCount = 182;
+        Persona persona1 = new Persona();
+        persona1.nombre = "Justin Imbaquingo";
+        persona1.edad = 20;
 
-        Libro libro2 = new Libro();
-        libro2.titulo = "Cumandá";
-        libro2.autor = "Juan León Mera";
-        libro2.paginaCount = 244;
+        Persona persona2 = new Persona();
+        persona2.nombre = "Gabriel Perez";
+        persona2.edad = 25;
 
-        System.out.println(libro1.infoLibro());
-        System.out.println(libro2.infoLibro());
+        persona1.presentarse();
+        persona2.presentarse();
     }
 }
 
-class Libro {
-    String titulo;
-    String autor;
-    int paginaCount;
+class Persona {
+    String nombre;
+    int edad;
 
-    String infoLibro() {
-        return "Título: " + titulo + ", Autor: " + autor + ", Páginas: " + paginaCount;
+    void presentarse() {
+        System.out.println("Hola, soy " + nombre + " y tengo " + edad + " años, y estudio en la EPN.");
     }
 }
